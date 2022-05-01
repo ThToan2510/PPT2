@@ -1,6 +1,6 @@
 ﻿// BTL_PPT2.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // BTL_PPT2 is reate by C++ language
-
+// coppyright @ ThToan2510
 #include <algorithm>
 #include <iostream>
 #include <math.h>
@@ -42,9 +42,8 @@ int main(){
     for (int i = 0; i < 14; i++) {
         cout << solution[i] << endl;
     }
-    std::cout << "Hello World!\n";
     ofstream data;
-    data.open("c:/Users/nttoa/desktop/data.tmp",ios::trunc);
+    data.open("c:/Users/nttoa/desktop/data.tmp",ios::trunc);    // Thay đổi tuỳ theo địa chỉ của tuần máy
     for (x = X[0]; x < X[9]; x += 0.001){
         y = 0;
         for (int i = 0; i < 14; i++) {
@@ -52,6 +51,12 @@ int main(){
         }
         data << x << " " << y << endl;
     }
+    cout << "Da thuc noi suy: " << endl;
+    cout << "P(x) = ";
+    for (int i = 0; i < 14; i++) {
+        cout <<" +"<< solution[i] << "x^" << i;
+    }
+    return 0;
 }
 void enterData(double X[], double Y[], int &cucDai, int &cucTieu) {
     cout << "Nhap cac diem X noi suy: \n";
